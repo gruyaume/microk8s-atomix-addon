@@ -1,9 +1,9 @@
 microk8s-addons:
   description: "Repository for the MicroK8s atomix add-on"
   addons:
-    - name: "atomix"
+    - name: "atomix-runtime"
       description: "Atomix provides distributed data structures and coordination primitives for Kubernetes"
       version: "1.0.0"
-      check_status: "deployment.apps/atomix-controller"
+      check_status: "deployment.apps/atomix-runtime"
       supported_architectures:
         - amd64

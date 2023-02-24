@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+
+NAMESPACE_ATOMIX_RUNTIME="kube-system"
+
+"$SNAP/microk8s-enable.wrapper" helm3
+HELM="$SNAP/microk8s-helm3.wrapper"
+KUBECTL="$SNAP/microk8s-kubectl.wrapper"
+
+echo "Disabling atomix-runtime"
+
+$HELM delete -n $NAMESPACE_ATOMIX_RUNTIME atomix-runtime
+$HELM repo remove atomix
+
+echo "Atomix-runtime disabled"

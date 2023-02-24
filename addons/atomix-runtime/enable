@@ -10,6 +10,6 @@ HELM="$SNAP/microk8s-helm3.wrapper"
 echo "Installing atomix-runtime"
 
 $HELM repo add --force-update atomix https://charts.atomix.io
-$HELM upgrade -i -n $NAMESPACE_ATOMIX_RUNTIME atomix/atomix-runtime
+$HELM upgrade -i -n $NAMESPACE_ATOMIX_RUNTIME atomix-runtime atomix/atomix-runtime
 
 echo "Aromix-runtime is installed"

@@ -14,4 +14,3 @@ $HELM delete -n $NAMESPACE_ATOMIX_RUNTIME atomix-runtime
 $HELM repo remove atomix
 
 echo "Atomix-runtime disabled"
-echo ""
